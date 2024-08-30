@@ -17,9 +17,9 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[           
-            InlineKeyboardButton('📢 Uᴩᴅᴀᴛᴇꜱ 📢', url=f'https://t.me/{SUPPORT_CHAT}')
+            InlineKeyboardButton('📢 ɢᴜʀᴜʜ 📢', url=f'https://t.me/{SUPPORT_CHAT}')
             ],[
-            InlineKeyboardButton('ℹ️ Hᴇʟᴩ ℹ️', url=f"https://t.me/{temp.U_NAME}?start=help")
+            InlineKeyboardButton('ℹ️ ʏᴏʀᴅᴀᴍ ℹ️', url=f"https://t.me/{temp.U_NAME}?start=help")
         ]]
         await message.reply(START_MESSAGE.format(user=message.from_user.mention if message.from_user else message.chat.title, bot=client.mention), reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)                    
         await asyncio.sleep(2) 
@@ -33,13 +33,13 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention, message.from_user.username, temp.U_NAME))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton("➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            InlineKeyboardButton("➕️ ɢᴜʀᴜʜɢᴀ ǫᴏ'ꜱʜɪꜱʜ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/mkn_bots_updates")
+            InlineKeyboardButton("Aɴɪᴍᴇ ɪᴢʟᴀꜱʜ 🔎", switch_inline_query_current_chat=''), 
+            InlineKeyboardButton("Kᴀɴᴀʟ 🔈", url="https://t.me/mkn_bots_updates")
             ],[      
-            InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
-            InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
+            InlineKeyboardButton("Yᴏʀᴅᴀᴍ 💮", callback_data="help"),
+            InlineKeyboardButton("Bᴏᴛ ʜᴀǫɪᴅᴀ ✨", callback_data="about")
         ]]
         m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ") 
         await asyncio.sleep(2)
@@ -52,14 +52,14 @@ async def start(client, message):
         except ChatAdminRequired:
             logger.error("MAKE SURE BOT IS ADMIN IN FORCESUB CHANNEL")
             return
-        btn = [[InlineKeyboardButton("Jᴏɪɴ Mʏ Cʜᴀɴɴᴇʟ ✨", url=invite_link.invite_link)]]
+        btn = [[InlineKeyboardButton("Kᴀɴᴀʟɢᴀ ǫᴏ'ꜱʜɪʟɪꜱʜ ✨", url=invite_link.invite_link)]]
         if message.command[1] != "subscribe":
             try:
                 kk, file_id = message.command[1].split("_", 1)
                 pre = 'checksubp' if kk == 'filep' else 'checksub' 
-                btn.append([InlineKeyboardButton("⟳ Tʀʏ Aɢᴀɪɴ", callback_data=f"{pre}#{file_id}")])
+                btn.append([InlineKeyboardButton("⟳ Tᴇᴋꜱʜɪʀɪꜱʜ", callback_data=f"{pre}#{file_id}")])
             except (IndexError, ValueError):
-                btn.append([InlineKeyboardButton("⟳ Tʀʏ Aɢᴀɪɴ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
+                btn.append([InlineKeyboardButton("⟳ Tᴇᴋꜱʜɪʀɪꜱʜ", url=f"https://t.me/{temp.U_NAME}?start={message.command[1]}")])
                 
         try:
             return await client.send_message(chat_id=message.from_user.id, text=FORCE_SUB_TEXT, reply_markup=InlineKeyboardMarkup(btn), parse_mode=enums.ParseMode.DEFAULT)
@@ -69,13 +69,13 @@ async def start(client, message):
         
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
-            InlineKeyboardButton("➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            InlineKeyboardButton("➕️ ɢᴜʀᴜʜɢᴀ ǫᴏ'ꜱʜɪꜱʜ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/mkn_bots_updates")
+            InlineKeyboardButton("Aɴɪᴍᴇ ɪᴢʟᴀꜱʜ 🔎", switch_inline_query_current_chat=''), 
+            InlineKeyboardButton("Kᴀɴᴀʟ 🔈", url="https://t.me/mkn_bots_updates")
             ],[      
-            InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
-            InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
+            InlineKeyboardButton("Yᴏʀᴅᴀᴍ 💮", callback_data="help"),
+            InlineKeyboardButton("Bᴏᴛ ʜᴀǫɪᴅᴀ ✨", callback_data="about")
         ]]
         m = await message.reply_sticker("CAACAgUAAxkBAAEBvlVk7YKnYxIHVnKW2PUwoibIR2ygGAACBAADwSQxMYnlHW4Ls8gQHgQ")
         await asyncio.sleep(2)

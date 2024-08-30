@@ -75,7 +75,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.message.delete()
                 try: await query.message.reply_to_message.delete()
                 except: pass
-            else: await query.answer("Buddy Don't Touch Others Property 😁", show_alert=True)
+            else: await query.answer("Pervert tegmang bu siz uchun emas💢", show_alert=True)
             
     elif "groupcb" in query.data:
         group_id = query.data.split(":")[1]
@@ -429,13 +429,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":                        
         buttons = [[
-            InlineKeyboardButton("➕️ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
+            InlineKeyboardButton("➕️ ɢᴜʀᴜʜɢᴀ ǫᴏ'ꜱʜɪꜱʜ ➕", url=f"http://t.me/{temp.U_NAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("Sᴇᴀʀᴄʜ 🔎", switch_inline_query_current_chat=''), 
-            InlineKeyboardButton("Cʜᴀɴɴᴇʟ 🔈", url="https://t.me/mkn_bots_updates")
+            InlineKeyboardButton("Aɴɪᴍᴇ ɪᴢʟᴀꜱʜ 🔎", switch_inline_query_current_chat=''), 
+            InlineKeyboardButton("Kᴀɴᴀʟ 🔈", url="https://t.me/mkn_bots_updates")
             ],[      
-            InlineKeyboardButton("Hᴇʟᴩ 🕸️", callback_data="help"),
-            InlineKeyboardButton("Aʙᴏᴜᴛ ✨", callback_data="about")
+            InlineKeyboardButton("Yᴏʀᴅᴀᴍ 💮", callback_data="help"),
+            InlineKeyboardButton("Bᴏᴛ ʜᴀǫɪᴅᴀ ✨", callback_data="about")
         ]]
         await query.edit_message_media(InputMediaPhoto(random.choice(PICS), START_MESSAGE.format(user=query.from_user.mention, bot=client.mention), enums.ParseMode.HTML), reply_markup=InlineKeyboardMarkup(buttons))
        
@@ -468,7 +468,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
     elif query.data == "source":
         buttons = [[
-            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://github.com/MrMKN/PROFESSOR-BOT')
+            InlineKeyboardButton('ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ', url='https://youtu.be/dQw4w9WgXcQ?si=zUBQWcAkQzXVAfNL')
             ],[
             InlineKeyboardButton('‹ Bᴀᴄᴋ', 'about')
         ]]
